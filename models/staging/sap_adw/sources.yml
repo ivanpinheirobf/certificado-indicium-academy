@@ -1,0 +1,114 @@
+version: 2
+
+sources:
+  - name: sap
+    description: Banco réplica do SAP da Adventure Works.
+    schema: sap_adw
+    tables:         
+      - name: product
+        description: Tabela com os produtos comercializados pela Adventure Works.
+        columns:
+          - name: productid
+            description: Chave primária da tabela de produtos.
+            tests:
+              - unique
+              - not_null
+
+      - name: creditcard
+        description: Tabela com os cartões de crédito cadastrados pela Adventure Works.
+        columns:
+          - name: creditcardid
+            description: Chave primária da tabela de cartões de crédito.
+            tests:
+              - unique
+              - not_null
+
+      - name: salesreason
+        description: Tabela com as razões pelos clientes da Adventure Works fazerem as compras.
+        columns:
+          - name: salesreasonid
+            description: Chave primária da tabela de razões da venda.
+            tests:
+              - unique
+              - not_null
+
+      - name: address
+        description: Tabela com os endereços cadastrados.
+        columns:
+          - name: addressid
+            description: Chave primária da tabela de endereços.
+            tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        description: Tabela com os países cadastrados.
+        columns:
+          - name: countryregioncode
+            description: Chave primária da tabela de países.
+            tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        description: Tabela com os estados cadastrados.
+        columns:
+          - name: stateprovinceid
+            description: Chave primária da tabela de estados.
+            tests:
+              - unique
+              - not_null
+
+      - name: salesperson
+        description: Tabela dos vendedores da Adventure Works.
+        columns:
+          - name: businessentityid
+            description: Chave primária da tabela de vendedores.
+            tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: Tabela com os clientes cadastrados.
+        columns:
+          - name: customerid
+            description: Chave primária da tabela de clientes.
+            tests:
+              - unique
+              - not_null
+
+      - name: employee
+        description: Tabela com os funcionários da Adventure Works.
+        columns:
+          - name: businessentityid
+            description: Chave primária da tabela de funcionários.
+            tests:
+              - unique
+              - not_null
+
+      - name: person
+        description: Tabela com as pessoas cadastradas.
+        columns:
+          - name: businessentityid
+            description: Chave primária da tabela de pessoas.
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderheader
+        description: Tabela com os pedidos das vendas da Adventure Works.
+        columns:
+          - name: salesorderid
+            description: Chave primária da tabela de pedidos das vendas.
+            tests:
+              - unique
+              - not_null
+
+      - name: salesorderdetail
+        description: Tabela com os detalhes dos pedidos das vendas da Adventure Works.
+        columns:
+          - name: salesorderdetailid
+            description: Chave primária da tabela dos detalhes dos pedidos das vendas.
+            tests:
+              - unique
+              - not_null
