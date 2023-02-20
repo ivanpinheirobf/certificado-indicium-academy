@@ -9,7 +9,7 @@ with
         from {{ ref('stg_sap__razoes_das_vendas') }}
     )
 
-    , transformacao as (
+    ,transformacao as (
         select
             row_number() over (order by razoes_pedidos_das_vendas.id_pedido_da_venda) as sk_razoes_pedidos
             ,razoes_pedidos_das_vendas.id_pedido_da_venda

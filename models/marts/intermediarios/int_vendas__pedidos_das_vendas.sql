@@ -30,7 +30,7 @@ with
         from {{ ref('stg_sap__detalhes_pedidos_das_vendas') }}
     )
 
-    ,joined as (
+    ,juncao as (
         select
             detalhes_pedidos.id_detalhe_pedido_da_venda
             ,detalhes_pedidos.id_pedido_da_venda
@@ -57,4 +57,4 @@ with
     )
 
 select *
-from joined
+from juncao

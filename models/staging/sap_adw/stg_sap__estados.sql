@@ -1,8 +1,8 @@
 with
     source_states as (
         select 
-        cast(stateprovinceid as string) as id_estado
-        ,cast(territoryid as string) as id_territorio
+        cast(stateprovinceid as int) as id_estado
+        ,cast(territoryid as int) as id_territorio
         ,cast(stateprovincecode as string) as codigo_estado
         ,cast(countryregioncode as string) as codigo_pais
         ,cast(name as string) as nome_estado
