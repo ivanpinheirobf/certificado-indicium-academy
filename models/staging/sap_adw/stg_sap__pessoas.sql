@@ -1,7 +1,7 @@
 with
     source_person as (
         select 
-            cast(businessentityid as string) as id_entidade_comercial_da_pessoa
+            cast(businessentityid as int) as id_entidade_do_negocio
             ,cast(persontype as string) as tipo_da_pessoa
             ,cast(namestyle as string) as estilo_do_nome
             ,cast(title as string) as titulo

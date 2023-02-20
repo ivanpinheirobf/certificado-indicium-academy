@@ -38,8 +38,12 @@ models:
         +materialized: view
         +schema: stg
     marts:
-      +materialized: table
-      +schema: marts
+      intermediarios:
+        +materialized: table
+        +schema: marts
+      comercial:
+        +materialized: table
+        +schema: marts
 
 seeds:
   dbt_adventure_works: # <-- Name of the project. If you renamed your project you have to change this as well
