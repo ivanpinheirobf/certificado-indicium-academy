@@ -5,6 +5,7 @@ sources:
     description: Banco réplica do SAP da Adventure Works.
     schema: dbt_ivanpinheiro_marts
     tables:         
+      
       - name: dim_clientes
         description: Tabela dimensão dos clientes, juntando as tabelas clientes, pessoas, territórios e países cadastrados na Adventure Works.
         columns:
@@ -18,6 +19,7 @@ sources:
             tests:
               - unique
               - not_null
+      
       - name: dim_razoes_pedidos
         description: Tabela dimensão das razões para cada pedido das vendas na Adventure Works.
         columns:
@@ -26,6 +28,7 @@ sources:
             tests:
               - unique
               - not_null
+      
       - name: dim_enderecos
         description: Tabela dimensão dos endereços cadastrados na Adventure Works.
         columns:
@@ -39,6 +42,7 @@ sources:
             tests:
               - unique
               - not_null
+      
       - name: dim_produtos
         description: Tabela dimensão dos produtos cadastrados na Adventure Works.
         columns:
@@ -49,6 +53,15 @@ sources:
               - not_null
           - name: id_produto
             description: Chave candidata da tabela dos produtos.
+            tests:
+              - unique
+              - not_null
+      
+      - name: fct_vendas
+        description: Tabela fato dos pedidos das vendas da Adventure Works.
+        columns:
+          - name: sk_venda
+            description: Chave primária da tabela dos pedidos das vendas.
             tests:
               - unique
               - not_null
