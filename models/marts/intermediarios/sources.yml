@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: int_vendas
+    description: Banco réplica do SAP da Adventure Works.
+    schema: dbt_ivanpinheiro_marts
+    tables:         
+      - name: int_vendas__pedidos_das_vendas
+        description: Tabela intermediária com a junção dos pedidos, detalhes dos pedidos e razões dos pedidos das vendas da Adventure Works.
+        columns:
+          - name: id_detalhe_pedido_da_venda
+            description: Chave primária da tabela de pedidos das vendas.
+            tests:
+              - unique
+              - not_null
+      - name: int_vendas__territorios
+        description: Tabela intermediária com a junção dos territórios e países cadastrados na Adventure Works.
+        columns:
+          - name: id_territorio
+            description: Chave primária da tabela de territórios.
+            tests:
+              - unique
+              - not_null
