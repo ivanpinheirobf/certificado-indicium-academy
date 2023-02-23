@@ -28,6 +28,12 @@ sources:
             tests:
               - unique
               - not_null
+          - name: tipo_razao_da_venda
+            description: Coluna com o tipo da razão do pedido.
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['Other', 'Promotion', 'Marketing']
       
       - name: dim_enderecos
         description: Tabela dimensão dos endereços cadastrados na Adventure Works.
@@ -65,3 +71,8 @@ sources:
             tests:
               - unique
               - not_null
+          - name: tipo_do_cartao_de_credito
+            description: Coluna com o tipo do cartão de crédito usado para realizar o pedido.
+            tests:
+              - accepted_values:
+                  values: ['Vista', 'SuperiorCard', 'Distinguish', 'ColonialVoice']

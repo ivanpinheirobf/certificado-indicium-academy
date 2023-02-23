@@ -95,19 +95,6 @@ sources:
               - unique
               - not_null
 
-      - name: businessentitycontact
-        description: Tabela com contatos das entidades do negócio.
-        columns:
-          - name: businessentityid
-            description: Chave primária da tabela de contatos das entidades do negócio.
-            tests:
-              - not_null
-          - name: personid
-            description: Chave primária da tabela de contatos das entidades do negócio.
-            tests:
-              - unique
-              - not_null
-
       - name: salesorderheader
         description: Tabela com os pedidos das vendas da Adventure Works.
         columns:
