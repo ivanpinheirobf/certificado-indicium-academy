@@ -14,6 +14,11 @@ with
         from {{ ref('dim_enderecos') }}
     )
 
+    ,razoes_das_vendas as (
+        select *
+        from {{ ref('dim_razoes_pedidos') }}
+    )
+
     ,territorios as (
         select *
         from {{ ref('int_vendas__territorios') }}
